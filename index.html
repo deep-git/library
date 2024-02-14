@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library</h1>
+        <div class="add_content">
+            <button id="show-dialog" type="submit">Add New Books</button>
+            <dialog id="dialog_books">
+                <form method="dialog">
+                    <p>Add New Book</p>
+                    <label>
+                        * Title:
+                        <input type="text" id="book_title" required/>
+                    </label>
+                    <label>
+                        * Author:
+                        <input type="text" id="book_author" required/>
+                    </label>
+                    <label>
+                        # of Pages:
+                        <input type="number" id="book_pages"/>
+                    </label>
+                    <label id="completed_group">
+                        Completed:
+                        <label id="completed_yes_button">Yes</label>
+                        <input type="radio" name="completed_book" id="completed_yes"/>
+                        <label id="completed_no_button">No</label>
+                        <input type="radio" name="completed_book" id="completed_no"/>
+                    </label>
+                    <div class="submit_buttons">
+                        <input type="submit" id="validate_close" value="Close" formnovalidate>
+                        <input type="submit" id="submit_book" onclick="addBook()">
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <div class="show_books" id="show_books">
+            <table id="book_table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Completed</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="show_books_table">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
